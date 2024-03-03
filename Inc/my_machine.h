@@ -50,7 +50,7 @@
 // More here https://github.com/grblHAL/Plugins_spindle
 //#define SPINDLE0_ENABLE         SPINDLE_HUANYANG1
 #define SPINDLE0_ENABLE 	SPINDLE_VFD
-// #define SPINDLE1_ENABLE         SPINDLE_PWM0
+#define SPINDLE1_ENABLE         SPINDLE_PWM0
 //#define SPINDLE2_ENABLE         SPINDLE_NONE
 //#define SPINDLE3_ENABLE         SPINDLE_NONE
 // **********************
@@ -93,10 +93,10 @@
 // Optional control signals:
 // These will be assigned to aux input pins. Use the $pins command to check which pins are assigned.
 // NOTE: If not enough pins are available assignment will silently fail.
-// #define SAFETY_DOOR_ENABLE      1
+#define SAFETY_DOOR_ENABLE      1
 // #define MOTOR_FAULT_ENABLE      1
 // #define MOTOR_WARNING_ENABLE    1
-//#define PROBE_DISCONNECT_ENABLE 1
+#define PROBE_DISCONNECT_ENABLE 1
 #define STOP_DISABLE_ENABLE     1
 //#define BLOCK_DELETE_ENABLE     1
 //#define SINGLE_BLOCK_ENABLE     1
