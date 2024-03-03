@@ -27,8 +27,11 @@
  * derived from btt octopus map
  *
  */
+
+#define BOARD_BTT_OCTOPUS_MAX
+
 #if N_ABC_MOTORS > 3
-#error "Octopus MAX board map is only configured for 6 motors max."
+#error "this board map is only configured for 6 motors max."
 #endif
 
 #if !(defined(STM32H723xx)) || HSE_VALUE != 25000000

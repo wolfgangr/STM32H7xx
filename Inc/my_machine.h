@@ -24,10 +24,10 @@
 //#define BOARD_PROTONEER_3XX   // For use with a Nucleo-F756ZG board.
 //#define BOARD_GENERIC_UNO     // For use with a Nucleo-F756ZG board.
 //#define BOARD_BTT_SKR_30      // BTT SKR V3 board.
-//#define BOARD_BTT_OCTOPUS_MAX // BTT Octopus Max board.
+#define BOARD_BTT_OCTOPUS_MAX // BTT Octopus Max board.
 //#define BOARD_WEACT_MINI_H743 // WeAct MiniSTM32H743 board.
 //#define BOARD_REFERENCE       // grblHAL reference board map.
-#define BOARD_MY_MACHINE      // Add my_machine_map.h before enabling this!
+// #define BOARD_MY_MACHINE      // Add my_machine_map.h before enabling this!
 
 #if defined(NUCLEO_H743) || defined(NUCLEO_H723)
 #define IS_NUCLEO_DEVKIT 1
@@ -48,11 +48,12 @@
 // Spindle definitions can be found in grbl/spindle_control.h.
 // More here https://github.com/grblHAL/Plugins_spindle
 //#define SPINDLE0_ENABLE         SPINDLE_HUANYANG1
-#define SPINDLE1_ENABLE         SPINDLE_PWM0
+#define SPINDLE0_ENABLE 	SPINDLE_VFD
+// #define SPINDLE1_ENABLE         SPINDLE_PWM0
 //#define SPINDLE2_ENABLE         SPINDLE_NONE
 //#define SPINDLE3_ENABLE         SPINDLE_NONE
 // **********************
-#define MODBUS_ENABLE           1 // Set to 1 for auto direction, 2 for direction signal on auxillary output pin.
+// #define MODBUS_ENABLE           1 // Set to 1 for auto direction, 2 for direction signal on auxillary output pin.
 #define WEBUI_ENABLE            3 // Enable ESP3D-WEBUI plugin along with networking and SD card plugins.
 #define WEBUI_AUTH_ENABLE       1 // Enable ESP3D-WEBUI authentication.
 //#define WEBUI_INFLASH           1 // Store WebUI files in flash instead of on SD card.
@@ -75,19 +76,25 @@
 //#define PLASMA_ENABLE           1 // Plasma (THC) plugin. To be completed.
 //#define TRINAMIC_ENABLE      2130 // Trinamic TMC2130 stepper driver support.
 //#define TRINAMIC_ENABLE      5160 // Trinamic TMC5160 stepper driver support.
-//#define TRINAMIC_R_SENSE      110 // R sense resistance in milliohms, 2130 and 2209 default is 110, 5160 is 75.
+#define TRINAMIC_ENABLE   2209 // Trinamic TMC2209 stepper driver support.
+#define TRINAMIC_R_SENSE      110 // R sense resistance in milliohms, 2130 and 2209 default is 110, 5160 is 75.
+#define TRINAMIC_UART_ENABLE	1 // [wjr]
+
 //#define TRINAMIC_I2C            1 // Trinamic I2C - SPI bridge interface.
 //#define TRINAMIC_DEV            1 // Development mode, adds a few M-codes to aid debugging. Do not enable in production code.
 //#define EEPROM_ENABLE          16 // I2C EEPROM/FRAM support. Set to 16 for 2K, 32 for 4K, 64 for 8K, 128 for 16K and 256 for 16K capacity.
 //#define EEPROM_IS_FRAM          1 // Uncomment when EEPROM is enabled and chip is FRAM, this to remove write delay.
 #define ESTOP_ENABLE            0 // When enabled only real-time report requests will be executed when the reset pin is asserted.
                                     // NOTE: if left commented out the default setting is determined from COMPATIBILITY_LEVEL.
+
+// #define MCP3221_ENABLE    0x4D // [wjr] Enable MCP3221 I2C ADC input with address 0x4D (0b01001101).
+
 // Optional control signals:
 // These will be assigned to aux input pins. Use the $pins command to check which pins are assigned.
 // NOTE: If not enough pins are available assignment will silently fail.
-//#define SAFETY_DOOR_ENABLE      1
-#define MOTOR_FAULT_ENABLE      1
-#define MOTOR_WARNING_ENABLE    1
+// #define SAFETY_DOOR_ENABLE      1
+// #define MOTOR_FAULT_ENABLE      1
+// #define MOTOR_WARNING_ENABLE    1
 //#define PROBE_DISCONNECT_ENABLE 1
 #define STOP_DISABLE_ENABLE     1
 //#define BLOCK_DELETE_ENABLE     1
@@ -96,6 +103,8 @@
 
 /**/
 
+// #define N_ABC_MOTORS	2
+#define N_AXIS 5
 // If the selected board map supports more than three motors ganging and/or auto-squaring
 // of axes can be enabled here.
 //#define X_GANGED            1

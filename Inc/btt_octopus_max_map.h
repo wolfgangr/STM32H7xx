@@ -24,9 +24,9 @@
 #error "Octopus MAX board map is only configured for 6 motors max."
 #endif
 
-#if !(defined(STM32H723xx)) || HSE_VALUE != 25000000
-#error "This board has a STM32H723 processor with 25MHz crystal, select a corresponding build!"
-#endif
+// #if !(defined(STM32H723xx)) || HSE_VALUE != 25000000
+// #error "This board has a STM32H723 processor with 25MHz crystal, select a corresponding build!"
+// #endif
 
 #define BOARD_NAME "BTT Octopus MAX"
 #define BOARD_URL "https://github.com/bigtreetech/Octopus-Max-EZ"
