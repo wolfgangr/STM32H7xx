@@ -63,7 +63,7 @@
                                     // 1: Mode switching is by handshake pin input unless the keypad plugin is enabled in mode 2 which
                                     //    uses mode switching by the CMD_MPG_MODE_TOGGLE (0x8B) command character.
                                     // 2: Mode switching is by the CMD_MPG_MODE_TOGGLE command character. The keypad plugin is not required.
-#define KEYPAD_ENABLE           1 // 1: uses a I2C keypad for input.
+// #define KEYPAD_ENABLE           1 // 1: uses a I2C keypad for input.
                                     // 2: uses a serial port for input. If MPG_ENABLE is set to 1 the serial stream is shared with the MPG.
 //#define ODOMETER_ENABLE         1 // Odometer plugin.
 //#define PPI_ENABLE              1 // Laser PPI plugin. To be completed.
@@ -73,11 +73,11 @@
 #define FANS_ENABLE             1 // Enable fan control via M106/M107. Enables fans plugin.
 //#define EMBROIDERY_ENABLE       1 // Embroidery plugin. To be completed.
 #define PLASMA_ENABLE           1 // Plasma (THC) plugin. To be completed.
-#define TRINAMIC_ENABLE      2130 // Trinamic TMC2130 stepper driver support.
-#define TRINAMIC_ENABLE      5160 // Trinamic TMC5160 stepper driver support.
+//#define TRINAMIC_ENABLE      2130 // Trinamic TMC2130 stepper driver support.
+//#define TRINAMIC_ENABLE      5160 // Trinamic TMC5160 stepper driver support.
 //#define TRINAMIC_R_SENSE      110 // R sense resistance in milliohms, 2130 and 2209 default is 110, 5160 is 75.
-#define TRINAMIC_I2C            1 // Trinamic I2C - SPI bridge interface.
-#define TRINAMIC_DEV            1 // Development mode, adds a few M-codes to aid debugging. Do not enable in production code.
+//#define TRINAMIC_I2C            1 // Trinamic I2C - SPI bridge interface.
+//#define TRINAMIC_DEV            1 // Development mode, adds a few M-codes to aid debugging. Do not enable in production code.
 //#define EEPROM_ENABLE          16 // I2C EEPROM/FRAM support. Set to 16 for 2K, 32 for 4K, 64 for 8K, 128 for 16K and 256 for 16K capacity.
 //#define EEPROM_IS_FRAM          1 // Uncomment when EEPROM is enabled and chip is FRAM, this to remove write delay.
 #define ESTOP_ENABLE            0 // When enabled only real-time report requests will be executed when the reset pin is asserted.
@@ -85,7 +85,7 @@
 // Optional control signals:
 // These will be assigned to aux input pins. Use the $pins command to check which pins are assigned.
 // NOTE: If not enough pins are available assignment will silently fail.
-#define SAFETY_DOOR_ENABLE      1
+//#define SAFETY_DOOR_ENABLE      1
 #define MOTOR_FAULT_ENABLE      1
 #define MOTOR_WARNING_ENABLE    1
 //#define PROBE_DISCONNECT_ENABLE 1
