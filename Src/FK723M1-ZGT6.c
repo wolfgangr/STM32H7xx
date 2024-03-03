@@ -24,7 +24,7 @@
 
 #include "driver.h"
 // #if defined(BOARD_BTT_OCTOPUS_MAX)
-#if defined(BOARD_FK723M1-ZGT6)
+#if defined(BOARD_FK723M1_ZGT6)
 
 void board_init (void)
 {
