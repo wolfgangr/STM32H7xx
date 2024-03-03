@@ -1,26 +1,34 @@
-## personal development fork
+## !!! personal development fork !!!
 
-want to build firmware fo this rather bare 144 pin board called FK723M1-ZGT6 V1.0
+I want to build firmware fo this rather bare 144 pin board called `FK723M1-ZGT6 V1.0`
+
 https://www.aliexpress.com/item/1005005919904877.html
 
-maybe, this is quite similiar to
+
+
+Maybe, this is quite similiar to
+
 https://www.st.com/en/evaluation-tools/nucleo-h743zi.html
 
-I see that exitsting board config hits GPIO limits, which have no justification whith this kind of board
 
-features I'd like to implement - among others:
+
+I see that exitsting board config hits GPIO limits, which have no justification whith this kind of 144-package boards
+
+Features I'd like to implement - among others:
 - gantry autosquare 
 - plasma THC
 - TMC2209 current control (UART connected)
 
-machines in mind:
+Machines in mind:
 - twotrees ttc450 (add gantry autoalign and wired ethernet control)
 - DIY plasma cutter (inspired by JD garage) w/ dual Y and THC
 - DIY will with dual Z and VFD spindle
 - maybe some parallel kinematics in the future
 
-any support welcome
-if it works, I'll issue a pull request - take the promise
+
+Any support welcome :-)
+
+If it works, I'll issue a pull request - take the promise :-)))
 
 
 ## grblHAL driver for STM32H7xx processors
