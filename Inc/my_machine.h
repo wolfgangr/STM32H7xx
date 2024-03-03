@@ -24,10 +24,10 @@
 //#define BOARD_PROTONEER_3XX   // For use with a Nucleo-F756ZG board.
 //#define BOARD_GENERIC_UNO     // For use with a Nucleo-F756ZG board.
 //#define BOARD_BTT_SKR_30      // BTT SKR V3 board.
-#define BOARD_BTT_OCTOPUS_MAX // BTT Octopus Max board.
+//#define BOARD_BTT_OCTOPUS_MAX // BTT Octopus Max board.
 //#define BOARD_WEACT_MINI_H743 // WeAct MiniSTM32H743 board.
 //#define BOARD_REFERENCE       // grblHAL reference board map.
-// #define BOARD_MY_MACHINE      // Add my_machine_map.h before enabling this!
+#define BOARD_MY_MACHINE      // Add my_machine_map.h before enabling this!
 
 #if defined(NUCLEO_H743) || defined(NUCLEO_H723)
 #define IS_NUCLEO_DEVKIT 1
@@ -76,9 +76,9 @@
 //#define PLASMA_ENABLE           1 // Plasma (THC) plugin. To be completed.
 //#define TRINAMIC_ENABLE      2130 // Trinamic TMC2130 stepper driver support.
 //#define TRINAMIC_ENABLE      5160 // Trinamic TMC5160 stepper driver support.
-#define TRINAMIC_ENABLE   2209 // Trinamic TMC2209 stepper driver support.
-#define TRINAMIC_R_SENSE      110 // R sense resistance in milliohms, 2130 and 2209 default is 110, 5160 is 75.
-#define TRINAMIC_UART_ENABLE	1 // [wjr]
+//#define TRINAMIC_ENABLE   2209 // Trinamic TMC2209 stepper driver support.
+//#define TRINAMIC_R_SENSE      110 // R sense resistance in milliohms, 2130 and 2209 default is 110, 5160 is 75.
+//#define TRINAMIC_UART_ENABLE	1 // [wjr]
 
 //#define TRINAMIC_I2C            1 // Trinamic I2C - SPI bridge interface.
 //#define TRINAMIC_DEV            1 // Development mode, adds a few M-codes to aid debugging. Do not enable in production code.

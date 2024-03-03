@@ -24,7 +24,7 @@
 #endif
 
 #if !(defined(STM32H743xx)|| defined(STM32H723xx)) || HSE_VALUE != 25000000
-#error "This board has STM32H7xx processor with a 25MHz crystal, select a corresponding build!"
+// #error "This board has STM32H7xx processor with a 25MHz crystal, select a corresponding build!"
 #endif
 
 #define BOARD_NAME "BTT SKR-3"

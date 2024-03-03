@@ -28,15 +28,17 @@
  *
  */
 
-#define BOARD_BTT_OCTOPUS_MAX
+// #define BOARD_BTT_OCTOPUS_MAX
 
 #if N_ABC_MOTORS > 3
 #error "this board map is only configured for 6 motors max."
 #endif
 
+/*
 #if !(defined(STM32H723xx)) || HSE_VALUE != 25000000
 #error "This board has a STM32H723 processor with 25MHz crystal, select a corresponding build!"
 #endif
+*/
 
 #define BOARD_NAME "FK723M1-ZGT6 V1.0"
 #define BOARD_URL "https://www.aliexpress.com/item/1005005919904877.html"
