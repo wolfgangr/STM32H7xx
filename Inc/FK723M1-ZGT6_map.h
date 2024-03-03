@@ -49,6 +49,14 @@
 
 
 #define I2C_PORT                    2       // GPIOB: SCL = 10, SDA = 11
+/*
+// [wjr] for keypad
+#if I2C_STROBE_ENABLE
+#define I2C_STROBE_PORT         GPIOB
+#define I2C_STROBE_PIN          14
+#endif
+*/
+
 #define SPI_PORT                    4       // GPIOE: SCK = 12, MISO = 13, MOSI = 14
 
 #define HAS_BOARD_INIT
