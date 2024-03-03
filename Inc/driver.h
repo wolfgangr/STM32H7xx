@@ -110,8 +110,8 @@
 #elif defined(BOARD_BTT_SKR_30)
   #include "btt_skr_v3.0_map.h"
 // #define BOARD_MY_MACHINE      // Add my_machine_map.h
-#elif defined(BOARD_MY_MACHINE)
-  #include "my_machine_map.h"
+#elif defined(BOARD_FK723M1_ZGT6)
+  #include "FK723M1-ZGT6_map.h"
 #elif defined(BOARD_BTT_OCTOPUS_MAX)
   #include "btt_octopus_max_map.h"
 #elif defined(BOARD_WEACT_MINI_H743)
