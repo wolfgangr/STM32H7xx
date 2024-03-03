@@ -55,7 +55,7 @@
 //#define SPINDLE3_ENABLE         SPINDLE_NONE
 // **********************
 // #define MODBUS_ENABLE           1 // Set to 1 for auto direction, 2 for direction signal on auxillary output pin.
-#define WEBUI_ENABLE            3 // Enable ESP3D-WEBUI plugin along with networking and SD card plugins.
+#define WEBUI_ENABLE            1 // Enable ESP3D-WEBUI plugin along with networking and SD card plugins.
 #define WEBUI_AUTH_ENABLE       1 // Enable ESP3D-WEBUI authentication.
 //#define WEBUI_INFLASH           1 // Store WebUI files in flash instead of on SD card.
 #define ETHERNET_ENABLE         1 // Ethernet streaming. Uses networking plugin.
@@ -77,7 +77,7 @@
 //#define PLASMA_ENABLE           1 // Plasma (THC) plugin. To be completed.
 //#define TRINAMIC_ENABLE      2130 // Trinamic TMC2130 stepper driver support.
 //#define TRINAMIC_ENABLE      5160 // Trinamic TMC5160 stepper driver support.
-//#define TRINAMIC_ENABLE   2209 // Trinamic TMC2209 stepper driver support.
+#define TRINAMIC_ENABLE   2209 // Trinamic TMC2209 stepper driver support.
 //#define TRINAMIC_R_SENSE      110 // R sense resistance in milliohms, 2130 and 2209 default is 110, 5160 is 75.
 //#define TRINAMIC_UART_ENABLE	1 // [wjr]
 
