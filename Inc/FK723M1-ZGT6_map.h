@@ -44,6 +44,10 @@
 #define BOARD_URL "https://www.aliexpress.com/item/1005005919904877.html"
 
 #define SERIAL_PORT                 32      // GPIOD: TX = 8, RX = 9
+#define SERIAL1_PORT				1     // [wjr] : does this confict?
+// #define SERIAL2_PORT				6     // [wjr] : does this confict?
+
+
 #define I2C_PORT                    2       // GPIOB: SCL = 10, SDA = 11
 #define SPI_PORT                    4       // GPIOE: SCK = 12, MISO = 13, MOSI = 14
 

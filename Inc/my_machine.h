@@ -54,7 +54,7 @@
 //#define SPINDLE2_ENABLE         SPINDLE_NONE
 //#define SPINDLE3_ENABLE         SPINDLE_NONE
 // **********************
-// #define MODBUS_ENABLE           1 // Set to 1 for auto direction, 2 for direction signal on auxillary output pin.
+#define MODBUS_ENABLE           1 // Set to 1 for auto direction, 2 for direction signal on auxillary output pin.
 #define WEBUI_ENABLE            1 // Enable ESP3D-WEBUI plugin along with networking and SD card plugins.
 #define WEBUI_AUTH_ENABLE       1 // Enable ESP3D-WEBUI authentication.
 //#define WEBUI_INFLASH           1 // Store WebUI files in flash instead of on SD card.
