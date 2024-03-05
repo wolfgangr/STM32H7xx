@@ -153,6 +153,12 @@
 #define SAFETY_DOOR_PIN             3        // AUXINPUT0_PIN
 #endif
 
+#if MOTOR_WARNING_ENABLE
+#define MOTOR_WARNING_PORT            GPIOD
+#define MOTOR_WARNING_PIN             5
+#endif
+
+
 #define CONTROL_INMODE              GPIO_SINGLE
 
 // Define probe switch input pin.
