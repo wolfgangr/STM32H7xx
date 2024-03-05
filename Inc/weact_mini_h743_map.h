@@ -149,8 +149,8 @@
 
 
 #if SAFETY_DOOR_ENABLE
-#define SAFETY_DOOR_PORT            GPIOD    // AUXINPUT0_PORT
-#define SAFETY_DOOR_PIN             3        // AUXINPUT0_PIN
+#define SAFETY_DOOR_PORT            AUXINPUT0_PORT
+#define SAFETY_DOOR_PIN             AUXINPUT0_PIN
 #endif
 
 #if MOTOR_WARNING_ENABLE

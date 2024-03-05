@@ -73,7 +73,7 @@
 //#define LASER_COOLANT_ENABLE    1 // Laser coolant plugin. To be completed.
 //#define LB_CLUSTERS_ENABLE      1 // LaserBurn cluster support.
 //#define OPENPNP_ENABLE          1 // OpenPNP plugin. To be completed.
-#define FANS_ENABLE             1 // Enable fan control via M106/M107. Enables fans plugin.
+//#define FANS_ENABLE             1 // Enable fan control via M106/M107. Enables fans plugin.
 //#define EMBROIDERY_ENABLE       1 // Embroidery plugin. To be completed.
 #define PLASMA_ENABLE           1 // Plasma (THC) plugin. To be completed.
 #define STEP_INJECT_ENABLE	1  // [wjr] for plasma??
@@ -87,7 +87,7 @@
 //#define TRINAMIC_DEV            1 // Development mode, adds a few M-codes to aid debugging. Do not enable in production code.
 //#define EEPROM_ENABLE          16 // I2C EEPROM/FRAM support. Set to 16 for 2K, 32 for 4K, 64 for 8K, 128 for 16K and 256 for 16K capacity.
 //#define EEPROM_IS_FRAM          1 // Uncomment when EEPROM is enabled and chip is FRAM, this to remove write delay.
-#define ESTOP_ENABLE            0 // When enabled only real-time report requests will be executed when the reset pin is asserted.
+#define ESTOP_ENABLE            1 // When enabled only real-time report requests will be executed when the reset pin is asserted.
                                     // NOTE: if left commented out the default setting is determined from COMPATIBILITY_LEVEL.
 
 // #define MCP3221_ENABLE    0x4D // [wjr] Enable MCP3221 I2C ADC input with address 0x4D (0b01001101).
@@ -113,7 +113,7 @@
 //#define X_GANGED            1
 //#define X_AUTO_SQUARE       1
 //#define Y_GANGED            1
-#define Y_AUTO_SQUARE       1
+//#define Y_AUTO_SQUARE       1
 //#define Z_GANGED            1
 //#define Z_AUTO_SQUARE       1
 // For ganged axes the limit switch input (if available) can be configured to act as a max travel limit switch.
