@@ -89,26 +89,26 @@
 #if N_ABC_MOTORS > 1
 #define M4_AVAILABLE                        // Motor-5
 #define M4_STEP_PORT                GPIOE
-#define M4_STEP_PIN                 11
+#define M4_STEP_PIN                 7
 #define M4_DIRECTION_PORT           GPIOE
-#define M4_DIRECTION_PIN            12
+#define M4_DIRECTION_PIN            8
 #define M4_LIMIT_PORT               GPIOC
 #define M4_LIMIT_PIN                7       // MIN5
 #define M4_ENABLE_PORT              GPIOE
-#define M4_ENABLE_PIN               13       // EN for M4
+#define M4_ENABLE_PIN               9       // EN for M4
 #endif
 
 // Define ganged axis or C axis step pulse and step direction output pins.
 #if N_ABC_MOTORS > 2
 #define M5_AVAILABLE                        // Motor-6
-#define M5_STEP_PORT                GPIOA
+#define M5_STEP_PORT                GPIOE
 #define M5_STEP_PIN                 0
-#define M5_DIRECTION_PORT           GPIOA
+#define M5_DIRECTION_PORT           GPIOE
 #define M5_DIRECTION_PIN            1
 #define M5_LIMIT_PORT               GPIOA
-#define M5_LIMIT_PIN                3      // MIN6
+#define M5_LIMIT_PIN                2      // MIN6
 #define M5_ENABLE_PORT              GPIOA
-#define M5_ENABLE_PIN               2       // EN for M5 motor
+#define M5_ENABLE_PIN               3       // EN for M5 motor
 #endif
 
 // Define spindle enable and spindle direction output pins.
@@ -134,29 +134,69 @@
 #define FEED_HOLD_PIN               9
 #define CYCLE_START_PIN             10
 
+// auxinput ports .... for controls .... check for IRQ --- check live wit $pins
 
-// #define AUXINPUT0_PORT              GPIOD
-// #define AUXINPUT0_PIN               3
-
-#define AUXINPUT0_PORT              GPIOD
-#define AUXINPUT0_PIN               0
-
-#define AUXOUPUT0_PORT              GPIOB
-#define AUXOUPUT0_PIN               1
-
-#define AUXINTPUT0_ANALOG_PORT              GPIOD  // same typo as for PIN?
-#define AUXINTPUT0_ANALOG_PIN               1   // is this a typo? see Src/driver.c
-
+#define AUXINPUT0_PORT              GPIOE
+#define AUXINPUT0_PIN               11
 
 #if SAFETY_DOOR_ENABLE
 #define SAFETY_DOOR_PORT            AUXINPUT0_PORT
 #define SAFETY_DOOR_PIN             AUXINPUT0_PIN
 #endif
 
+
+#define AUXINPUT1_PORT              GPIOE
+#define AUXINPUT1_PIN               12
+
 #if MOTOR_WARNING_ENABLE
-#define MOTOR_WARNING_PORT            GPIOD
-#define MOTOR_WARNING_PIN             5
+#define MOTOR_WARNING_PORT          AUXINPUT1_PORT
+#define MOTOR_WARNING_PIN           AUXINPUT1_PIN
 #endif
+
+#define AUXINPUT2_PORT              GPIOE
+#define AUXINPUT2_PIN               13
+
+#if ESTOP_ENABLE
+#define ESTOP_PORT			        AUXINPUT2_PORT
+#define ESTOP_PIN           		AUXINPUT2_PIN
+#endif
+
+#define AUXINPUT3_PORT              GPIOE
+#define AUXINPUT3_PIN               14
+
+STOP_DISABLE_ENABLE
+
+#if STOP_DISABLE_ENABLE
+#define STOP_DISABLE_PORT		    AUXINPUT3_PORT
+#define STOP_DISABLE_PIN        	AUXINPUT3_PIN
+#endif
+
+// unused - IRQ conflict with z probe???
+#define AUXINPUT4_PORT              GPIOE
+#define AUXINPUT4_PIN               15
+
+// hopefully assigned to TCH torch OK.... no IRQ??
+#define AUXINPUT5_PORT              GPIOC
+#define AUXINPUT5_PIN               13
+
+
+// outputs-----
+#define AUXOUPUT0_PORT              GPIOE
+#define AUXOUPUT0_PIN               3
+
+// THC torch control
+#define AUXOUPUT1_PORT              GPIOE
+#define AUXOUPUT1_PIN               10
+
+
+// Analog in for THC
+#define AUXINTPUT0_ANALOG_PORT              GPIOA  // same typo as for PIN?
+#define AUXINTPUT0_ANALOG_PIN               0      // is this a typo? see Src/driver.c
+
+
+
+
+
 
 
 #define CONTROL_INMODE              GPIO_SINGLE
