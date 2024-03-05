@@ -19,8 +19,8 @@
   along with Grbl.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#if N_ABC_MOTORS > 0
-// #error "WeAct Mini STM32H743 supports 3 motors max."
+#if N_ABC_MOTORS > 3
+#error "WeAct Mini STM32H743 supports 6 motors max."
 #endif
 
 #if !defined(STM32H743xx) || HSE_VALUE != 25000000

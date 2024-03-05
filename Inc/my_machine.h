@@ -40,7 +40,7 @@
 // Uncomment to enable.
 
 #if !IS_NUCLEO_DEVKIT && !defined(USB_SERIAL_CDC)   // The Nucleo-F756ZG board has an off-chip UART to USB interface.
-//#define USB_SERIAL_CDC          1 // Serial communication via native USB.
+#define USB_SERIAL_CDC          1 // Serial communication via native USB.
 #endif
 // Spindle selection:
 // Up to four specific spindle drivers can be instantiated at a time
@@ -65,7 +65,7 @@
                                     // 1: Mode switching is by handshake pin input unless the keypad plugin is enabled in mode 2 which
                                     //    uses mode switching by the CMD_MPG_MODE_TOGGLE (0x8B) command character.
                                     // 2: Mode switching is by the CMD_MPG_MODE_TOGGLE command character. The keypad plugin is not required.
-//#define KEYPAD_ENABLE           1 // 1: uses a I2C keypad for input.
+// #define KEYPAD_ENABLE           1 // 1: uses a I2C keypad for input.
                                     // 2: uses a serial port for input. If MPG_ENABLE is set to 1 the serial stream is shared with the MPG.
 //#define ODOMETER_ENABLE         1 // Odometer plugin.
 //#define PPI_ENABLE              1 // Laser PPI plugin. To be completed.
@@ -96,7 +96,7 @@
 // NOTE: If not enough pins are available assignment will silently fail.
 #define SAFETY_DOOR_ENABLE      1
 // #define MOTOR_FAULT_ENABLE      1
-// #define MOTOR_WARNING_ENABLE    1
+#define MOTOR_WARNING_ENABLE    1
 #define PROBE_DISCONNECT_ENABLE 1
 #define STOP_DISABLE_ENABLE     1
 //#define BLOCK_DELETE_ENABLE     1
