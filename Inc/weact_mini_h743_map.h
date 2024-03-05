@@ -153,6 +153,7 @@
 #define MOTOR_WARNING_PIN           AUXINPUT1_PIN
 #endif
 
+
 #define AUXINPUT2_PORT              GPIOE
 #define AUXINPUT2_PIN               13
 
@@ -161,15 +162,15 @@
 #define ESTOP_PIN           		AUXINPUT2_PIN
 #endif
 
+
 #define AUXINPUT3_PORT              GPIOE
 #define AUXINPUT3_PIN               14
-
-STOP_DISABLE_ENABLE
 
 #if STOP_DISABLE_ENABLE
 #define STOP_DISABLE_PORT		    AUXINPUT3_PORT
 #define STOP_DISABLE_PIN        	AUXINPUT3_PIN
 #endif
+
 
 // unused - IRQ conflict with z probe???
 #define AUXINPUT4_PORT              GPIOE
@@ -192,9 +193,6 @@ STOP_DISABLE_ENABLE
 // Analog in for THC
 #define AUXINTPUT0_ANALOG_PORT              GPIOA  // same typo as for PIN?
 #define AUXINTPUT0_ANALOG_PIN               0      // is this a typo? see Src/driver.c
-
-
-
 
 
 
