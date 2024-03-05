@@ -20,7 +20,7 @@
 */
 
 #if N_ABC_MOTORS > 0
-#error "WeAct Mini STM32H743 supports 3 motors max."
+// #error "WeAct Mini STM32H743 supports 3 motors max."
 #endif
 
 #if !defined(STM32H743xx) || HSE_VALUE != 25000000
@@ -72,6 +72,45 @@
 #define Z_LIMIT_PIN                 5                           // Z- Limit
 #define LIMIT_INMODE                GPIO_SINGLE
 
+// Define ganged axis or A axis step pulse and step direction output pins.
+#if N_ABC_MOTORS > 0
+#define M3_AVAILABLE                        // Motor-4
+#define M3_STEP_PORT                GPIOE
+#define M3_STEP_PIN                 7
+#define M3_DIRECTION_PORT           GPIOE
+#define M3_DIRECTION_PIN            8
+#define M3_LIMIT_PORT               GPIOC
+#define M3_LIMIT_PIN                6       // MIN4
+#define M3_ENABLE_PORT              GPIOE
+#define M3_ENABLE_PIN               9       // EN for M3 motor
+#endif
+
+// Define ganged axis or B axis step pulse and step direction output pins.
+#if N_ABC_MOTORS > 1
+#define M4_AVAILABLE                        // Motor-5
+#define M4_STEP_PORT                GPIOE
+#define M4_STEP_PIN                 11
+#define M4_DIRECTION_PORT           GPIOE
+#define M4_DIRECTION_PIN            12
+#define M4_LIMIT_PORT               GPIOC
+#define M4_LIMIT_PIN                7       // MIN5
+#define M4_ENABLE_PORT              GPIOE
+#define M4_ENABLE_PIN               13       // EN for M4
+#endif
+
+// Define ganged axis or C axis step pulse and step direction output pins.
+#if N_ABC_MOTORS > 2
+#define M5_AVAILABLE                        // Motor-6
+#define M5_STEP_PORT                GPIOA
+#define M5_STEP_PIN                 0
+#define M5_DIRECTION_PORT           GPIOA
+#define M5_DIRECTION_PIN            1
+#define M5_LIMIT_PORT               GPIOA
+#define M5_LIMIT_PIN                3      // MIN6
+#define M5_ENABLE_PORT              GPIOA
+#define M5_ENABLE_PIN               2       // EN for M5 motor
+#endif
+
 // Define spindle enable and spindle direction output pins.
 #define SPINDLE_ENABLE_PORT         GPIOB
 #define SPINDLE_ENABLE_PIN          7                           //
@@ -95,12 +134,23 @@
 #define FEED_HOLD_PIN               9
 #define CYCLE_START_PIN             10
 
-#define AUXINPUT0_PORT              GPIOA
-#define AUXINPUT0_PIN               7
+
+// #define AUXINPUT0_PORT              GPIOD
+// #define AUXINPUT0_PIN               3
+
+#define AUXINPUT0_PORT              GPIOD
+#define AUXINPUT0_PIN               0
+
+#define AUXOUPUT0_PORT              GPIOB
+#define AUXOUPUT0_PIN               1
+
+#define AUXINTPUT0_ANALOG_PORT              GPIOD  // same typo as for PIN?
+#define AUXINTPUT0_ANALOG_PIN               1   // is this a typo? see Src/driver.c
+
 
 #if SAFETY_DOOR_ENABLE
-#define SAFETY_DOOR_PORT            AUXINPUT0_PORT
-#define SAFETY_DOOR_PIN             AUXINPUT0_PIN
+#define SAFETY_DOOR_PORT            GPIOD    // AUXINPUT0_PORT
+#define SAFETY_DOOR_PIN             3        // AUXINPUT0_PIN
 #endif
 
 #define CONTROL_INMODE              GPIO_SINGLE
@@ -117,6 +167,21 @@
 #define MOTOR_UARTY_PIN             5
 #define MOTOR_UARTZ_PORT            GPIOE
 #define MOTOR_UARTZ_PIN             6
+
+#ifdef  M3_AVAILABLE
+#define MOTOR_UARTM3_PORT           GPIOE
+#define MOTOR_UARTM3_PIN            15
+#endif
+
+#ifdef  M4_AVAILABLE
+#define MOTOR_UARTM4_PORT           GPIOE
+#define MOTOR_UARTM4_PIN            14
+#endif
+
+#ifdef  M5_AVAILABLE
+#define MOTOR_UARTM5_PORT           GPIOA
+#define MOTOR_UARTM5_PIN            4
+#endif
 
 #elif TRINAMIC_SPI_ENABLE
 
@@ -142,6 +207,21 @@
 #define MOTOR_CSZ_PORT              GPIOE
 #define MOTOR_CSZ_PIN               6
 
+#ifdef  M3_AVAILABLE
+#define MOTOR_CSM3_PORT             GPIOE
+#define MOTOR_CSM3_PIN              15
 #endif
+
+#ifdef  M4_AVAILABLE
+#define MOTOR_CSM4_PORT             GPIOE
+#define MOTOR_CSM4_PIN              14
+#endif
+
+#ifdef  M5_AVAILABLE
+#define MOTOR_CSM5_PORT             GPIOA
+#define MOTOR_CSM5_PIN              4
+#endif
+
+#endif // TRINAMIC_SPI_ENABLE
 
 // EOF
