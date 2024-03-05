@@ -106,7 +106,7 @@
 /**/
 
 // #define N_ABC_MOTORS	2
-#define N_AXIS 5
+// #define N_AXIS 5
 // If the selected board map supports more than three motors ganging and/or auto-squaring
 // of axes can be enabled here.
 //#define X_GANGED            1
