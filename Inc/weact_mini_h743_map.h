@@ -268,4 +268,16 @@
 
 #endif // TRINAMIC_SPI_ENABLE
 
+
+
+#define I2C_PORT        1   // GPIOB: SCL = 8, SDA = 9
+#ifdef I2C_STROBE_ENABLE
+#define I2C_STROBE_PORT         GPIOB
+#define I2C_STROBE_PIN          2
+#endif // I2C_PORT
+
+
+
+
+
 // EOF
