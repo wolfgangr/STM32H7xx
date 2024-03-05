@@ -271,10 +271,13 @@
 
 
 #define I2C_PORT        1   // GPIOB: SCL = 8, SDA = 9
+
 /*
 #ifdef I2C_STROBE_ENABLE
 #define I2C_STROBE_PORT         GPIOB
 #define I2C_STROBE_PIN          2
+// [wjr] don't ask me why... grbl/pin_bits_masks.h:261
+#define SPI_IRQ_BIT 0
 #endif // I2C_PORT
 */
 
